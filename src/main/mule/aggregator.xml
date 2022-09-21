@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:aggregators="http://www.mulesoft.org/schema/mule/aggregators"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/aggregators http://www.mulesoft.org/schema/mule/aggregators/current/mule-aggregators.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="aggregatorFlow" doc:id="1df19911-1925-41b6-bdf9-47e5c499893c" >
+		<http:listener doc:name="Listener" doc:id="c3822e47-f7da-4de8-ba5e-aa20c3f36f59" />
+		<aggregators:size-based-aggregator doc:name="Size based aggregator" doc:id="8aca84f7-7775-416e-bce5-4f24d1d78c8c" >
+			<aggregators:aggregation-complete />
+		</aggregators:size-based-aggregator>
+	</flow>
+</mule>
